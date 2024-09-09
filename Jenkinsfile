@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('echo') {
       steps {
-        sh 'echo ${env.BUILD_TIMESTAMP}'
+        sh 'echo hello world'
       }
     }
 
