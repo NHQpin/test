@@ -2,6 +2,12 @@ pipeline {
   agent any
   stages {
     stage('build-images') {
+      agent {
+        docker {
+          image 'docker:dind'
+        }
+
+      }
       steps {
         sh 'echo hello world'
       }
